@@ -12,7 +12,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ URL::to('/') }}"><img width="87px" height="23px"
+                    <a class="navbar-brand" href="{{ URL::to('/') }}"><img width="150px" height="23px"
                                                                            alt="Tiny Issue"
                                                                            src="{{ asset('images/layout/tinyissue.png') }}"></a>
                 </div>
