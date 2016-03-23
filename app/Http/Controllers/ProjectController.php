@@ -219,7 +219,7 @@ class ProjectController extends Controller
 
         $project->update($request->all());
 
-        return redirect('projects')
+        return redirect($project->to())
             ->with('notice', trans('tinyissue.project_has_been_updated'));
     }
 
@@ -230,7 +230,7 @@ class ProjectController extends Controller
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function getInactiveUsers(Project $project)
+    public function getInactiveUsers(Project $project = null)
     {
         $users = $project->usersNotIn();
 

@@ -153,7 +153,7 @@ class Issue extends FormAbstract
             'assigned_to' => [
                 'type'    => 'select',
                 'label'   => 'assigned_to',
-                'options' => [0 => ''] + $this->project->users()->get()->lists('fullname', 'id')->all(),
+                'options' => [0 => ''] + $this->project->usersCanFixIssue()->get()->lists('fullname', 'id')->all(),
                 'value'   => (int) $this->project->default_assignee,
             ],
         ];
@@ -195,12 +195,6 @@ class Issue extends FormAbstract
                         'type'          => 'number',
                         'append'        => trans('tinyissue.minutes'),
                         'value'         => $this->extractQuoteValue('m'),
-                        'addGroupClass' => 'col-sm-12 col-md-12 col-lg-4',
-                    ],
-                    's' => [
-                        'type'          => 'number',
-                        'append'        => trans('tinyissue.seconds'),
-                        'value'         => $this->extractQuoteValue('s'),
                         'addGroupClass' => 'col-sm-12 col-md-12 col-lg-4',
                     ],
                 ],
@@ -251,10 +245,6 @@ class Issue extends FormAbstract
 
             if ($part === 'm') {
                 return ($seconds / 60) % 60;
-            }
-
-            if ($part === 's') {
-                return $seconds % 60;
             }
         }
 

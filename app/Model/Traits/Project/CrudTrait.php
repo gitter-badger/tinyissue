@@ -52,13 +52,13 @@ trait CrudTrait
      */
     public function createProject(array $input = [])
     {
+        $this->fill($input)->save();
+
         if (!empty($input['columns'])) {
             $this->saveTags($input['columns']);
 
             unset($input['columns']);
         }
-
-        $this->fill($input)->save();
 
         /* Assign selected users to the project */
         if (isset($input['user']) && count($input['user']) > 0) {
@@ -79,7 +79,7 @@ trait CrudTrait
      */
     public function update(array $attributes = [])
     {
-        if (!empty($attributes['columns'])) {
+        if (array_key_exists('columns', $attributes)) {
             $this->saveTags($attributes['columns']);
 
             unset($attributes['columns']);
