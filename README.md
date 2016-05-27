@@ -1,4 +1,6 @@
-# Tiny Issue v2.5.1 - for Laravel 5.1+
+# Tiny Issue v2.7.1 - for Laravel 5.1+
+
+[![Join the chat at https://gitter.im/satrun77/tinyissue](https://badges.gitter.im/satrun77/tinyissue.svg)](https://gitter.im/satrun77/tinyissue?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/a6c6ecdf-13f6-4e51-a9f0-f1fffebf1fdd/mini.png)](https://insight.sensiolabs.com/projects/a6c6ecdf-13f6-4e51-a9f0-f1fffebf1fdd)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/satrun77/tinyissue/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/satrun77/tinyissue/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/satrun77/tinyissue/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/satrun77/tinyissue/?branch=master)
